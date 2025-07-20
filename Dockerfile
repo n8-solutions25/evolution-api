@@ -15,7 +15,6 @@ COPY ./prisma ./prisma
 COPY ./.env.example ./.env
 COPY ./runWithProvider.js ./
 COPY ./tsup.config.ts ./
-COPY ./Docker ./Docker
 
 RUN chmod +x ./Docker/scripts/* && dos2unix ./Docker/scripts/* && \
     ./Docker/scripts/generate_database.sh && \
